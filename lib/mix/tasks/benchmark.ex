@@ -11,21 +11,16 @@ defmodule Mix.Tasks.Benchmark do
     send_riemann(100_000)
   end
 
-  defp send_riemann(n) when n <= 1 do
-    create_event
-    |> Riemann.send
-  end
-
   defp send_riemann(n) do
-    create_event
-    |> Enum.map(&Task.async(fn -> Riemann.send(&1) end))
-    |> Enum.map(&Task.await/1)
-    send_riemann(n-1)
+    Stream.repeatedly(&create_event/0)
+    |> Stream.take(n)
+    |> Stream.map(&Task.async(fn -> Riemann.send(&1) end))
+    |> Stream.run()
   end
 
-  defp create_event do
-    [[service: "CPU utilization",
+  def create_event do
+    [service: "CPU utilization",
      metric: :rand.uniform,
-     attributes: [cpu_number: "1"]]]
+     attributes: [cpu_number: "1"]]
   end
 end
