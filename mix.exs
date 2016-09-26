@@ -11,11 +11,12 @@ defmodule RiemannBenchmarkElixir.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :riemann],
+    [applications: [:logger, :riemann, :katja],
      mod: {RiemannBenchmarkElixir, []}]
   end
 
   defp deps do
-    [{:riemann, "~> 0.0.16"}]
+    [{:riemann, "~> 0.0.16"},
+     {:katja, github: "asconix/katja"}]
   end
 end

@@ -1,4 +1,4 @@
-defmodule RiemannBenchmarkElixir.Worker do
+defmodule RiemannBenchmarkElixir.ElixirRiemannWorker do
   alias RiemannBenchmarkElixir.Counter
 
   def start_link(n) do
@@ -6,6 +6,7 @@ defmodule RiemannBenchmarkElixir.Worker do
     {:ok, pid}
   end
 
+  # https://github.com/koudelka/elixir-riemann
   defp benchmark(n) do
     Stream.repeatedly(&create_event/0)
     |> Stream.take(n)

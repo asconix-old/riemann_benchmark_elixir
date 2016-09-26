@@ -1,4 +1,7 @@
 %{"exprotobuf": {:hex, :exprotobuf, "1.0.2", "71056a3547eb37e53d64d892d4bc7a5d8d6355f48070e646357c6ed64571bfea", [:mix], [{:gpb, "~> 3.23.2", [hex: :gpb, optional: false]}]},
   "gpb": {:hex, :gpb, "3.23.2", "dfabca052f8f4a8c6f98d43c6653e0037416537a9e5a747019f4ef53713982e3", [:rebar, :make], []},
   "honeydew": {:hex, :honeydew, "0.0.11", "dd8f07675651b01610e382e019aee3a151528eb4cd088ec17b33b7501d28e065", [:mix], []},
+  "katja": {:git, "https://github.com/asconix/katja.git", "a25efa64c9ad5e575a5dd5b0bc4bf696bb129930", []},
+  "meck": {:git, "git://github.com/basho/meck.git", "dde759050eff19a1a80fd854d7375174b191665d", [tag: "0.8.2"]},
+  "protobuffs": {:git, "git://github.com/basho/erlang_protobuffs", "a1eeee77aef639a33cc5a2dd7abed7e4f4b83f9b", [tag: "0.8.2"]},
   "riemann": {:hex, :riemann, "0.0.16", "2d282f07431f438eb276b9f233a7c83077c329ccf41f2c5caa4f68a6c1cce5dd", [:mix], [{:exprotobuf, "~> 1.0.0", [hex: :exprotobuf, optional: false]}, {:honeydew, "~> 0.0.10", [hex: :honeydew, optional: false]}]}}
