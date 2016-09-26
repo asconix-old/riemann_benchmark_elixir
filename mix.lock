@@ -1,0 +1,4 @@
+%{"exprotobuf": {:hex, :exprotobuf, "1.0.2", "71056a3547eb37e53d64d892d4bc7a5d8d6355f48070e646357c6ed64571bfea", [:mix], [{:gpb, "~> 3.23.2", [hex: :gpb, optional: false]}]},
+  "gpb": {:hex, :gpb, "3.23.2", "dfabca052f8f4a8c6f98d43c6653e0037416537a9e5a747019f4ef53713982e3", [:rebar, :make], []},
+  "honeydew": {:hex, :honeydew, "0.0.11", "dd8f07675651b01610e382e019aee3a151528eb4cd088ec17b33b7501d28e065", [:mix], []},
+  "riemann": {:hex, :riemann, "0.0.16", "2d282f07431f438eb276b9f233a7c83077c329ccf41f2c5caa4f68a6c1cce5dd", [:mix], [{:exprotobuf, "~> 1.0.0", [hex: :exprotobuf, optional: false]}, {:honeydew, "~> 0.0.10", [hex: :honeydew, optional: false]}]}}
